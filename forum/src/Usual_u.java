@@ -77,7 +77,7 @@ public class Usual_u {
 
         public void red( String text) {
             for(int i=0;i<9;i++)
-        message.add(new String(),);
+        //message.add(new String(),);
 
             {  System.out.println(message+" Изменено");}
 

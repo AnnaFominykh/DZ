@@ -18,7 +18,6 @@ public class moderator {
 
 
     public void mess (String Mid, String text) {
-
         Messages new_mess = new Messages();
         new_mess.set_m_id(Mid);
         new_mess.setText(text);
@@ -54,31 +53,15 @@ public class moderator {
 
         if (role == "usual") {
             int u;
-            String a = "Сообщение удалено.";
-            for (u = 0; u < message.size(); u++) ;
-            if (message.get(u).getText().equals(text)) ;
-            {
-                message.remove(u);
-            }
-            System.out.println("Сообщение удалено.");
-        }
+
+            for (u=0;u<message.size();u++){
+                if (message.get(u).getText().equals(text));
+                {message.remove(u);
+                    System.out.println("Сообщение удалено.");}}}
+
         else System.out.println("Вы не можете удалить это сообщение.");
 
 
-    }
-
-    public void del_m_u (String Mid, String text, String role) {
-
-       if (role=="usual"){
-                int d;
-                for (d=0;d<message.size();d++);
-                if (message.get(d).Get_m_id().equals(Mid) && message.get(d).getText().equals(text));
-            {message.remove(d);}
-            System.out.println("Сообщение удалено.");}
-               else
-            {System.out.println("Вы не можете удалить это сообщение.");}
+    }}
 
 
-        }
-
-    }

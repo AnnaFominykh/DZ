@@ -26,12 +26,12 @@ public class Main {
 
         M1.mess(": Привет!");
         M1.mess(": Салют!");
-        M1.mess(": Вы где?");
+        M2.mess(": Вы где?");
         M1.mess(": Мы тут.");
         M1.mess(": Бонжур.");
-        M1.mess(": Тужур.;)");
+        M3.mess(": Тужур.;)");
         M1.mess(": Мерси боку.XD");
-        M1.mess(": Хеллоу, пойдем в кино?");
+        M2.mess(": Хеллоу, пойдем в кино?");
 
 
 
@@ -41,43 +41,52 @@ public class Main {
         System.out.println(M1.message.get(1).get_u_id()+" : " + R1.registered.get(1).GetName()+
                 M1.message.get(1).getText()+" | " +M1.message.get(1).Get_m_id() );
 
-        System.out.println(M1.message.get(2).get_u_id()+" : " + R1.registered.get(2).GetName()+
+        System.out.println(M2.message.get(0).get_u_id()+" : " + R1.registered.get(2).GetName()+
+                M2.message.get(0).getText()+" | " +M2.message.get(0).Get_m_id() );
+
+        System.out.println(M1.message.get(2).get_u_id()+" : " + R1.registered.get(3).GetName()+
                 M1.message.get(2).getText()+" | " +M1.message.get(2).Get_m_id() );
 
-        System.out.println(M1.message.get(3).get_u_id()+" : " + R1.registered.get(3).GetName()+
+        System.out.println(M1.message.get(3).get_u_id()+" : " + R1.registered.get(4).GetName()+
                 M1.message.get(3).getText()+" | " +M1.message.get(3).Get_m_id() );
 
-        System.out.println(M1.message.get(4).get_u_id()+" : " + R1.registered.get(4).GetName()+
+        System.out.println(M3.message.get(0).get_u_id()+" : " + R1.registered.get(5).GetName()+
+                M3.message.get(0).getText()+" | " +M3.message.get(0).Get_m_id() );
+
+        System.out.println(M1.message.get(4).get_u_id()+" : " + R1.registered.get(6).GetName()+
                 M1.message.get(4).getText()+" | " +M1.message.get(4).Get_m_id() );
 
-        System.out.println(M1.message.get(5).get_u_id()+" : " + R1.registered.get(5).GetName()+
-                M1.message.get(5).getText()+" | " +M1.message.get(5).Get_m_id() );
-
-        System.out.println(M1.message.get(6).get_u_id()+" : " + R1.registered.get(6).GetName()+
-                M1.message.get(6).getText()+" | " +M1.message.get(6).Get_m_id() );
-
-        System.out.println(M1.message.get(7).get_u_id()+" : " + R1.registered.get(7).GetName()+
-                M1.message.get(7).getText()+" | " +M1.message.get(7).Get_m_id() );
+        System.out.println(M2.message.get(1).get_u_id()+" : " + R1.registered.get(7).GetName()+
+                M2.message.get(1).getText()+" | " +M2.message.get(1).Get_m_id() );
 
 
         for (int A= 0; A < M1.message.size(); A++){
-           M1.message.get(A).Get_m_id();
+            M1.message.get(A).Get_m_id();
 
         }
 
 
         for (int i= 0; i < M1.message.size(); i++){
-          M1.message.get(i).get_u_id();
+            M1.message.get(i).get_u_id();
 
         }
 
 
         M1.del_m(": Мерси боку.XD","usual");
+        M2.del_m(": Привет!","usual");
 
         for (int i = 0; i <  M1.message.size(); i++){
             System.out.println( M1.message.get(i).getText());
         }
-       // https://overcoder.net/q/85549/%D0%BA%D0%B0%D0%BA-%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B8%D1%82%D1%8C-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%B0-arraylist-%D0%B2-java
+        M3.add("Tabaxi","rogue10","usual");
+        for (int i = 0; i <M3.registered.size(); i++){
+            System.out.println(M3.registered.get(i).GetName());
+        };
+        M3.del_p("Hobbit","Wizard6","moderator");
+
+        for (int i = 0; i <  R1.registered.size(); i++){
+            System.out.println( R1.registered.get(i).GetName());
+        }
 
 
     }}

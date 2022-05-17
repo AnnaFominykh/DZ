@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class admin{
+public class admin extends Register{
     ArrayList<Messages> message =new ArrayList<>();
     ArrayList<User> registered =new ArrayList<>();
 
@@ -18,7 +18,6 @@ public class admin{
     }
 
     public void mess (String Mid, String text) {
-
         Messages new_mess = new Messages();
         new_mess.set_m_id(Mid);
         new_mess.setText(text);
@@ -69,28 +68,29 @@ public class admin{
     }
     public void add(String name, String pass, String role){
 
-
-                ArrayList<User> registered = new ArrayList<>();
-                User new_user = new User();
-                new_user.SetPassword(pass);
-                new_user.SetName(name);
-                new_user.SetRole(role);
-                registered.add(new_user);
+        User new_user= new User();
+        new_user.SetPassword(pass);
+        new_user.SetName(name);
+        new_user.SetRole(role);
+        boolean add = registered.add(new_user);
         }
 
 
-public void del_p(String name, String pass, String role, String uID){
-    int u;
-    for (u=0;u<registered.size();u++);
-    if (registered.get(u).GetName().equals(name)&& registered.get(u).GetPassword().equals(pass)&&
-            registered.get(u).GetRole().equals(role)&&message.get(u).get_u_id().equals(uID));
-    {registered.remove(u);}
-}
 
-    public void cr(String name, String pass, String role) {
-        ArrayList<User> registered =new ArrayList<>();
-        User new_user= new User();
-        new_user.SetRole(role);
-        registered.add(Integer.parseInt(role), new_user);
+    public void del_p(String name, String pass, String role) {
+        int u;
+        for (u = 0; u < registered.size(); u++) ;
+        if (registered.get(u).GetName().equals(name) && registered.get(u).GetPassword().equals(pass) &&
+                registered.get(u).GetRole().equals(role)) ;
+        {
+            registered.remove(u);
+        }
+
     }
-}
+        public void cr (String name, String pass, String role){
+            ArrayList<User> registered = new ArrayList<>();
+            User new_user = new User();
+            new_user.SetRole(role);
+            registered.add(Integer.parseInt(role), new_user);
+        }
+    }
