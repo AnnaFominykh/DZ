@@ -42,8 +42,17 @@ public class admin extends Register{
         boolean add = message.add(new_mess);
     }
 
-    public   void write_comm(String Mid,String text)
+    public   void write_comm(String text)
     {
+
+        String Mid ="";
+
+
+        String poss="1234567890";
+        for (int i = 0; i < 4; i++){
+            Mid+=poss.charAt((int) ((Math.random()* (poss.length() - 0)) + 0));
+        }
+
         Messages new_mess = new Messages();
         new_mess.set_m_id(Mid);
         new_mess.setText(text);
@@ -78,15 +87,13 @@ public class admin extends Register{
 
 
     public void del_p(String name, String pass, String role) {
-        int u;
-        for (u = 0; u < registered.size(); u++) ;
-        if (registered.get(u).GetName().equals(name) && registered.get(u).GetPassword().equals(pass) &&
-                registered.get(u).GetRole().equals(role)) ;
-        {
-            registered.remove(u);
-        }
 
-    }
+        int p;
+        for (p = 0; p < registered.size(); p++) ;
+        if (registered.get(p).GetName().equals(name)
+                && registered.get(p).GetPassword().equals(pass));
+        {registered.remove(p);}}
+
         public void cr (String name, String pass, String role){
             ArrayList<User> registered = new ArrayList<>();
             User new_user = new User();

@@ -42,17 +42,13 @@ public class Register {
 
 
 
-    public void del(String name, String pass, String role)
+    public void del(String name, String pass,String role)
     {
-
-        //registered.add(reg);
-        int d;
-     for (d=0;d<registered.size();d++);
-     if (registered.get(d).GetName().equals(name)&& registered.get(d).GetPassword().equals(pass)&&
-             registered.get(d).GetRole().equals(role));
-        {registered.remove(d);}
-    }
+        int d = 0;
+        for (d=0;d<registered.size();d++){
+            if (registered.get(d).GetName().equals(name)&& registered.get(d).GetPassword().equals(pass));
+            {registered.remove(d);registered.remove(role.equals(d));}
 
 
-}
+}}}
 

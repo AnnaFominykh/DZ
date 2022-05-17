@@ -82,11 +82,18 @@ public class Main {
         for (int i = 0; i <M3.registered.size(); i++){
             System.out.println(M3.registered.get(i).GetName());
         };
-        M3.del_p("Hobbit","Wizard6","moderator");
 
-        for (int i = 0; i <  R1.registered.size(); i++){
-            System.out.println( R1.registered.get(i).GetName());
+        R1.del("Hobbit","Wizard6","moderator");
+
+
+
+M1.write_comm("Может лучше в бассейн?");
+        M2.write_comm("Лучше в кафе!");
+M3.write_comm("Нет уж, сначало в кино, а потом хоть на хоккей");
+
+        //System.out.println(M1.message.get(0).get_u_id()+" : " + R1.registered.get(0).GetName()+
+
+        for (int i = 0; i <  M3.registered.size(); i++){
+            System.out.println( M3.registered.get(i).GetRole());
         }
-
-
     }}

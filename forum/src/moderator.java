@@ -41,8 +41,16 @@ public class moderator {
         boolean add = message.add(new_mess);
     }
 
-    public   void write_comm(String Mid,String text)
+    public   void write_comm(String text)
     {
+
+        String Mid ="";
+
+
+        String poss="1234567890";
+        for (int i = 0; i < 4; i++){
+            Mid+=poss.charAt((int) ((Math.random()* (poss.length() - 0)) + 0));
+        }
         Messages new_mess = new Messages();
         new_mess.set_u_id(idU());
         new_mess.set_m_id(Mid);
