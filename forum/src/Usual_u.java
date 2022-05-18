@@ -83,18 +83,14 @@ public class Usual_u {
 
         }
 
+    public void red( String text, String a) {
+        text=a;
 
-        public void red( String text) {
-            for(int i=0;i<9;i++)
-        //message.add(new String(),);
+        Messages new_mess = new Messages();
+        new_mess.setText(text);
+        new_mess.setText(a);
+        message.add(new_mess);
 
-            {  System.out.println(message+" Изменено");}
-
-
-            Messages new_mess = new Messages();
-            new_mess.setText(text);
-            new_mess.set_u_id(idU());
-            boolean add = message.add(new_mess);
-        }
+    }
     }
     //https://overcoder.net/q/85549/%D0%BA%D0%B0%D0%BA-%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B8%D1%82%D1%8C-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%B0-arraylist-%D0%B2-java

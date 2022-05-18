@@ -49,6 +49,7 @@ public class Register {
             if (registered.get(d).GetName().equals(name)&& registered.get(d).GetPassword().equals(pass));
             {registered.remove(d);registered.remove(role.equals(d));}
 
+            }
 
-}}}
+}}
 

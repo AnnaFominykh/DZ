@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 public class admin extends Register{
     ArrayList<Messages> message =new ArrayList<>();
-    ArrayList<User> registered =new ArrayList<>();
 
     public String idU()
     {
@@ -18,6 +17,7 @@ public class admin extends Register{
     }
 
     public void mess (String Mid, String text) {
+
         Messages new_mess = new Messages();
         new_mess.set_m_id(Mid);
         new_mess.setText(text);
@@ -44,7 +44,6 @@ public class admin extends Register{
 
     public   void write_comm(String text)
     {
-
         String Mid ="";
 
 
@@ -77,27 +76,30 @@ public class admin extends Register{
     }
     public void add(String name, String pass, String role){
 
-        User new_user= new User();
+
+        User new_user = new User();
         new_user.SetPassword(pass);
         new_user.SetName(name);
         new_user.SetRole(role);
-        boolean add = registered.add(new_user);
-        }
-
-
-
-    public void del_p(String name, String pass, String role) {
-
-        int p;
-        for (p = 0; p < registered.size(); p++) ;
-        if (registered.get(p).GetName().equals(name)
-                && registered.get(p).GetPassword().equals(pass));
-        {registered.remove(p);}}
-
-        public void cr (String name, String pass, String role){
-            ArrayList<User> registered = new ArrayList<>();
-            User new_user = new User();
-            new_user.SetRole(role);
-            registered.add(Integer.parseInt(role), new_user);
-        }
+        registered.add(new_user);
     }
+
+
+    @Override
+    public void del(String name, String pass, String role) {
+        super.del(name, pass, role);
+    }
+
+
+    public void cr(String name, String pass, String role) {
+
+        if (role == "usual") {role="moderator";}
+        else {role = "usual";}
+
+        User new_user = new User();
+        new_user.SetPassword(pass);
+        new_user.SetName(name);
+        new_user.SetRole(role);
+        registered.add(new_user);;
+    }
+}
